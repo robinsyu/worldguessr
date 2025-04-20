@@ -912,9 +912,75 @@
                     <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
                     <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
                 </div>
+                <div class="language-switcher">
+                    <span>Language:</span>
+                    <a href="index.html" class="lang-link active">English</a>
+                    <a href="pt/index.html" class="lang-link">Português</a>
+                    <a href="fr/index.html" class="lang-link">Français</a>
+                    <a href="ko/index.html" class="lang-link">한국어</a>
+                    <a href="it/index.html" class="lang-link">Italiano</a>
+                    <a href="vi/index.html" class="lang-link">Tiếng Việt</a>
+                </div>
             </div>
         </div>
     </footer>
+    
+    <style>
+        .language-switcher {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .language-switcher span {
+            font-family: 'VT323', monospace;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+        
+        .lang-link {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.7rem;
+            color: #ffffff;
+            background-color: var(--primary-light);
+            border: 2px solid #000000;
+            padding: 5px 8px;
+            border-radius: 0;
+            box-shadow: 2px 2px 0 #000000;
+            transition: var(--transition);
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .lang-link:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0 #000000;
+            color: var(--accent-color);
+        }
+        
+        .lang-link.active {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .language-switcher {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .lang-link {
+                font-size: 0.6rem;
+                padding: 4px 6px;
+            }
+        }
+    </style>
     
     <script>
         // FAQ accordion functionality
